@@ -1,10 +1,13 @@
-import React from "react";
-import ChatBot from "react-chatbotify";
+import React, { useState, useEffect } from "react";
+import IrregularChatBot from "./IrregularChatBot";
 
 const ChatContainer = () => {
     return (
         <div className="chat-bot-container">
-            <ChatBot/>
+            <button onClick={() => appendMessage('test!')}>
+                Test
+            </button>
+            <IrregularChatBot/>
         </div>
     )
 }
