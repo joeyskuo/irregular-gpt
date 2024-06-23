@@ -25,6 +25,7 @@ const IrregularChatBot = () => {
 
 	// example options
 	const options = {
+        isOpen: true,
 		theme: {
 			embedded: true
 		},  
