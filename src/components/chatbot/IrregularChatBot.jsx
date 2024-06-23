@@ -23,6 +23,22 @@ const IrregularChatBot = () => {
 		})
 	}
 
+    // example replace messages
+	const replaceMessage = () => {
+		setMessages(prev => {
+
+			const newMessage = {
+				content: "Hello I am an in-place replacement!",
+				sender: "bot",
+				type: "string",
+			};
+
+            prev[prev.length-1] = newMessage;
+            
+			return [...prev]
+		})
+	}
+
 	// example options
 	const options = {
         isOpen: true,
@@ -53,6 +69,7 @@ const IrregularChatBot = () => {
 		<>
 			<Button onClick={clearMessages} text="Click me to clear messages!"/>
 			<Button onClick={insertMessage} text="Click me to add a message!"/>
+			<Button onClick={replaceMessage} text="Click me to replace a message!"/>
 			{/* Import MessagesContext and wrap as Provider around the chatbot */}
 			<MessagesContext.Provider value={{messages: messages, setMessages: setMessages}}>
 				<ChatBot options={options} flow={flow}/>
