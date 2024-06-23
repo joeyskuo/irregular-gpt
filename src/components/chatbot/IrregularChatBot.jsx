@@ -32,6 +32,9 @@ const IrregularChatBot = () => {
 		chatHistory: {
 			storageKey: "example_custom_messages"
 		},
+        botBubble: {
+            dangerouslySetInnerHtml: true
+        },
 		// remember to enable custom messages under the advance section
 		advance: {
 			useCustomMessages: true
