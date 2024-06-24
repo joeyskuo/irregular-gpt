@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import './ChatContainer.css';
 import IrregularChatBot from "./IrregularChatBot";
 
 const ChatContainer = () => {
