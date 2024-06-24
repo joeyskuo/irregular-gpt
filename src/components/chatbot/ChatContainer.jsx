@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
 import './ChatContainer.css';
+import * as chatBotData from './initialData.json';
 import IrregularChatBot from "./IrregularChatBot";
 
 const ChatContainer = (props) => {
 
-    const [uiData, setUiData] = useState({messages: []});
+    const [uiData, setUiData] = useState(chatBotData);
 
     const {controllerFunction, initialData } = props;
 
     useEffect(() => {
         controllerFunction?.('registerUpdateStateFunction', setUiData);
-        controllerFunction?.('setInitialData');
+        controllerFunction?.('updateData', uiData);
     }, [controllerFunction]);
 
     return (
