@@ -4,19 +4,18 @@ import IrregularChatBot from "./IrregularChatBot";
 
 const ChatContainer = (props) => {
 
-    const [uiData, setUiData] = useState(null);
+    const [uiData, setUiData] = useState({messages: []});
 
     const {controllerFunction, initialData } = props;
 
     useEffect(() => {
         controllerFunction?.('registerUpdateStateFunction', setUiData);
+        controllerFunction?.('setInitialData');
     }, [controllerFunction]);
-
-    const data = uiData ?? initialData;
 
     return (
         <div className="chat-bot-container">
-            <IrregularChatBot controllerFunction={controllerFunction}/>
+            <IrregularChatBot controllerFunction={controllerFunction} uiData={uiData}/>
         </div>
     )
 }
