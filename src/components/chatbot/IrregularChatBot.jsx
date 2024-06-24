@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ChatBot, { MessagesContext } from "react-chatbotify";
 
-const IrregularChatBot = () => {
+const IrregularChatBot = (props) => {
+
+    const { controllerFunction } = props;
 	// setup your own messages state 
 	const [messages, setMessages] = React.useState([]);
 
