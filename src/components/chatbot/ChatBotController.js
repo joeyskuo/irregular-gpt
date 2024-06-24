@@ -1,5 +1,4 @@
 import DataStore from "../../models/DataStore";
-
 const dataStore = new DataStore();
 
 const ChatBotController = (action, actionData) => {
