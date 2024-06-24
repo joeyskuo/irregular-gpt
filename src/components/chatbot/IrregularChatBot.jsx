@@ -1,57 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ChatBot, { MessagesContext } from "react-chatbotify";
 
 const IrregularChatBot = (props) => {
 
-    const { controllerFunction } = props;
-	// setup your own messages state 
-	const [messages, setMessages] = React.useState([]);
-
-	// example clear messages (while keeping system message)
-	// note: system message refers to the load history button
-	const clearMessages = () => {
-		setMessages(prev => prev.filter(msg => msg.sender === "system"));
-	}
-
-	// example insert messages
-	const insertMessage = () => {
-		setMessages(prev => {
-			const newMessage = {
-				content: "Hello I am new!",
-				sender: "bot",
-				type: "string",
-			}
-			return [...prev, newMessage]
-		})
-	}
-
-    // example insert messages
-	const createSketchMessage = () => {
-		setMessages(prev => {
-			const newMessage = {
-				content: "<div class='drawing-board'></div>",
-				sender: "bot",
-				type: "string",
-			}
-			return [...prev, newMessage]
-		})
-	}
-
-    // example replace messages
-	const replaceMessage = () => {
-		setMessages(prev => {
-
-			const newMessage = {
-				content: "Hello I am an in-place replacement!",
-				sender: "bot",
-				type: "string",
-			};
-
-            prev[prev.length-1] = newMessage;
-
-			return [...prev]
-		})
-	}
+    const { controllerFunction, uiData } = props;
 
 	// example options
 	const options = {
@@ -79,14 +31,20 @@ const IrregularChatBot = (props) => {
 		}
 	}
 
+    const controllerSetMessages = (messageFunction) => {
+        controllerFunction('applyMessageFunction', messageFunction);
+    }
+
+    console.log(uiData.messages);
+
 	return (
 		<>
-			<Button onClick={clearMessages} text="Click me to clear messages!"/>
-			<Button onClick={insertMessage} text="Click me to add a message!"/>
-			<Button onClick={replaceMessage} text="Click me to replace a message!"/>
-			<Button onClick={createSketchMessage} text="Click me to create a sketch!"/>
-			{/* Import MessagesContext and wrap as Provider around the chatbot */}
-			<MessagesContext.Provider value={{messages: messages, setMessages: setMessages}}>
+			<Button onClick={() => controllerFunction('clearMessages')} text="Click me to clear messages!"/>
+			<Button onClick={() => controllerFunction('insertMessage')} text="Click me to add a message!"/>
+			<Button onClick={() => controllerFunction('replaceMessage')} text="Click me to replace a message!"/>
+			<Button onClick={() => controllerFunction('createSketchMessage')} text="Click me to create a sketch!"/>
+			<Button onClick={() => controllerFunction('test')} text="Click me to trigger a controller function!"/>
+			<MessagesContext.Provider value={{messages: uiData.messages, setMessages: controllerSetMessages}}>
 				<ChatBot options={options} flow={flow}/>
 			</MessagesContext.Provider>
 		</>
