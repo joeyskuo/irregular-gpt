@@ -17,7 +17,7 @@
 	"flow": {
 		"start": {
 			"message": "Hello there! I am a demo for custom messages!",
-			"chatDisabled": true
+			"chatDisabled": false
 		}
 	},
     "messages": []
