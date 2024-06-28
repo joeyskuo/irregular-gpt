@@ -38,8 +38,16 @@ const ChatBotController = (action, actionData) => {
             break;
         case 'applyMessageFunction':
             console.log(actionData);
+            if(Array.isArray(actionData)) {
+                dataStore.setData(currentData);
+            } else {
+                let newArr = actionData(currentData.messages);
+                console.log(newArr);
+                currentData.messages = newArr;
+                dataStore.setData(currentData);
+            }
             // currentData.messages = actionData;
-            dataStore.setData(currentData);
+            // dataStore.setData(currentData);
             return currentData.messages;
         case 'clearMessages':
             newMessageArray = currentData.messages.filter(msg => msg.sender === "system");
