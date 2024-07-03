@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './ChatContainer.css';
+import MessageContainer from "./messageContainer/MessageContainer";
 
 const ChatContainer = (props) => {
 
@@ -18,6 +19,7 @@ const ChatContainer = (props) => {
 
     return (
         <div className="chat-container">
+            <MessageContainer />
         </div>
     )
 }
