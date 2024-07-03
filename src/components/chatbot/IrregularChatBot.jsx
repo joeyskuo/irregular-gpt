@@ -1,5 +1,4 @@
 import React from "react";
-import ChatBot, { MessagesContext } from "react-chatbotify";
 
 const IrregularChatBot = (props) => {
 
