@@ -4,9 +4,13 @@
     background-color: white;
 }
 
-.chat-bot-container {
+.chat-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: slategrey;
+    
+    height: 100%;
+    width: 100%;
 }

@@ -17,7 +17,7 @@ const ChatContainer = (props) => {
     }, []);
 
     return (
-        <div className="chat-bot-container">
+        <div className="chat-container">
         </div>
     )
 }
