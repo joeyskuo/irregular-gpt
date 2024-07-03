@@ -14,3 +14,28 @@
     height: 100%;
     width: 100%;
 }
+
+.message-container {
+    width: 500px;
+    height: 80%;
+
+    padding: 25px;
+}
+
+.message {
+    height: 50px;
+    width: 200px;
+
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.message--user {
+    align-self: right;
+    background-color: rgb(76, 187, 150);
+}
+
+.message--assistant {
+    align-self: start;
+    background-color: rgb(164, 193, 216);
+}
