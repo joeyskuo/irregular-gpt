@@ -1,14 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Message from "./Message";
+import { MessageContext } from "../../../models/messageContext/MessageContext";
 
 const MessageContainer = (props) => {
 
-    const [messages, setMessages] = useState([{role: "assistant", content: "How can Claude help you today?"}]);
+    const {messages} = useContext(MessageContext);
+
+    useEffect(() => {
+        console.log(messages.at(-1));
+    }, [messages]);
 
     return (
         <div className="message-container">
             {
-                messages.map((messageData) => <Message message={messageData} />)
+                messages.map((messageData) => <Message message={messageData} key={messageData.messageId}/>)
             }
         </div>
     )

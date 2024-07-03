@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import './ChatContainer.css';
 import MessageContainer from "./messageContainer/MessageContainer";
+import { MessageContext } from "../../models/messageContext/MessageContext";
 
 const ChatContainer = (props) => {
 
@@ -19,7 +20,9 @@ const ChatContainer = (props) => {
 
     return (
         <div className="chat-container">
-            <MessageContainer />
+            <MessageContext.Provider value={{messages}}>
+                <MessageContainer />
+            </MessageContext.Provider>
         </div>
     )
 }
