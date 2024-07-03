@@ -1,6 +1,6 @@
 import React from "react";
 import './SlimeScreen.css';
-import ChatContainer from "../chatbot/ChatContainer";
+import ChatContainer from "../chatContainer/ChatContainer";
 
 const SlimeScreen = () => {
     return (
