@@ -2,6 +2,7 @@ import React, { useState, useEffect, createContext } from "react";
 import { useStateRef } from "../../hooks/useStateRef";
 import './ChatContainer.css';
 import MessageContainer from "./messageContainer/MessageContainer";
+import PromptInput from "./promptInput/PromptInput";
 import { MessageContext } from "../../models/messageContext/MessageContext";
 import { flushSync } from "react-dom";
 
@@ -10,7 +11,7 @@ const ChatContainer = (props) => {
     const [messages, setMessages, messagesRef] = useStateRef([{role: "assistant", content: "How can Claude help you today?", messageId: "hash07ae1"}]);
 
     const updateMessages = (data) => {
-        
+
         const currentMessages = messagesRef.current;
         const currentMessagesLength = currentMessages.length;
 
@@ -54,6 +55,7 @@ const ChatContainer = (props) => {
             <MessageContext.Provider value={{messages}}>
                 <MessageContainer />
             </MessageContext.Provider>
+            <PromptInput />
         </div>
     )
 }
