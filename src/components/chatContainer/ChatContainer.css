@@ -23,7 +23,6 @@
 }
 
 .message {
-    height: 50px;
     width: 200px;
 
     border-radius: 10px;
@@ -31,7 +30,7 @@
 }
 
 .message--user {
-    align-self: right;
+    align-self: end;
     background-color: rgb(76, 187, 150);
 }
 
