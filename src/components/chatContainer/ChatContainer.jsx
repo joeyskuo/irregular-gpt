@@ -40,6 +40,7 @@ const ChatContainer = (props) => {
         });
 
         return () => {
+            console.log('eventSource closed!');
             sse.close();
         }
     }, []);
