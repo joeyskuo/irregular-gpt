@@ -1,9 +1,12 @@
 import React, { useState, useEffect, createContext } from "react";
+import { useStateRef } from "../../hooks/useStateRef";
 import './ChatContainer.css';
 import MessageContainer from "./messageContainer/MessageContainer";
 import { MessageContext } from "../../models/messageContext/MessageContext";
 
 const ChatContainer = (props) => {
+
+    const [messages, setMessages, messagesRef] = useStateRef([{role: "assistant", content: "How can Claude help you today?", messageId: "hash07ae1"}]);
 
     useEffect(() => {
         const sse = new EventSource("http://localhost:8080/stream", {withCredentials: false });
