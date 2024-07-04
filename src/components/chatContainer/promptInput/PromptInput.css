@@ -1,0 +1,11 @@
+.prompt-input-wrapper {
+    width: 60%;
+}
+
+.prompt-input {
+    width: 100%;
+
+    border: none;
+    border-radius: 5px;
+}
+
