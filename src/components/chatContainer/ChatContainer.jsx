@@ -32,11 +32,15 @@ const ChatContainer = (props) => {
     }
 
     useEffect(() => {
-        const sse = new EventSource("http://localhost:8080/stream", {withCredentials: false });
+        const sse = new EventSource("http://localhost:8080/stream");
         console.log('eventSource created!');
 
-        sse.addEventListener("message", ({ data }) => {
-            console.log(data);
+        sse.addEventListener("message", (messageObject) => {
+
+            const data = messageObject.data;
+            const sanitizedData = data.replaceAll('\"', '');
+
+            updateMessages(sanitizedData)
         });
 
         return () => {
