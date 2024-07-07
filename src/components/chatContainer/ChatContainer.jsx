@@ -20,12 +20,12 @@ const ChatContainer = (props) => {
         let newMessages = [...currentMessages];
 
 
-        if(latestMessage.role === "user") {
+        if(latestMessage.role === "assistant") {
             updatedMessage.content += data;
             newMessages[newMessages.length-1] = updatedMessage;
 
         } else {
-            updatedMessage = {role: "user", content: "" + data, messageId: `hash000-${currentMessagesLength}`};
+            updatedMessage = {role: "assistant", content: "" + data, messageId: `hash000-${currentMessagesLength}`};
             newMessages.push(updatedMessage);
         }
 
