@@ -50,6 +50,25 @@ const ChatContainer = (props) => {
         }
     }, []);
 
+    function getCookieValue(name) 
+    {
+      const regex = new RegExp(`(^| )${name}=([^;]+)`)
+      const match = document.cookie.match(regex)
+      if (match) {
+        return match[2]
+      }
+   }
+
+    const sendMessage = () => {
+        const newMessageArr = [...messages];
+        newMessageArr.push({role: "user", content: "Test Prompt Sent", messageId: "hash07ae1-2"});
+        setMessages(newMessageArr);
+        // if(!sessionId)
+        // const sse2 = new EventSource("http://localhost:8080/stream");
+        const sessionId = getCookieValue("sessionId");
+        fetch(`http://localhost:8080/${sessionId}/inference`);
+    }
+
     return (
         <div className="chat-container">
             <MessageContext.Provider value={{messages}}>
