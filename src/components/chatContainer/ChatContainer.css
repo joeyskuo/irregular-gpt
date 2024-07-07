@@ -22,19 +22,8 @@
     padding: 25px;
 }
 
-.message {
-    width: 200px;
-
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.message--user {
-    align-self: end;
-    background-color: rgb(76, 187, 150);
-}
-
-.message--assistant {
-    align-self: start;
-    background-color: rgb(164, 193, 216);
+.test-button {
+    position: absolute;
+    right: 280px;
+    bottom: 100px;
 }
