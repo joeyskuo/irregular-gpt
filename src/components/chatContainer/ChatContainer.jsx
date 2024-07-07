@@ -33,7 +33,7 @@ const ChatContainer = (props) => {
     }
 
     useEffect(() => {
-        const sse = new EventSource("http://localhost:8080/stream");
+        const sse = new EventSource("http://localhost:8080/createSession", { withCredentials: true });
         console.log('eventSource created!');
 
         sse.addEventListener("message", (messageObject) => {
