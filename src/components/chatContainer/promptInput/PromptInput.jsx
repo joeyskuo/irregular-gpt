@@ -1,5 +1,5 @@
 import React from "react";
-import './PromptInput.css';
+import './PromptInput.scss';
 
 const PromptInput = () => {
 

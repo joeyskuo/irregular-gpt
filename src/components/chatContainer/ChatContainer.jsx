@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createContext } from "react";
 import { useStateRef } from "../../hooks/useStateRef";
-import './ChatContainer.css';
+import './ChatContainer.scss';
 import MessageContainer from "./messageContainer/MessageContainer";
 import PromptInput from "./promptInput/PromptInput";
 import { MessageContext } from "../../models/messageContext/MessageContext";
