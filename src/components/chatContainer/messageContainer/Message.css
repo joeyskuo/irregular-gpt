@@ -8,6 +8,14 @@
     grid-template-columns: 1fr 4fr;
 }
 
+.message-content {
+    padding: 0px 4px;
+}
+
 .message-content-header {
     font-weight: 700;
+}
+
+.message-role-icon {
+    padding: 3px 3px;
 }
