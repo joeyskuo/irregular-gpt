@@ -9,7 +9,7 @@ import { flushSync } from "react-dom";
 
 const ChatContainer = (props) => {
 
-    const [messages, setMessages, messagesRef] = useStateRef([{role: "assistant", content: "How can Claude help you today?", messageId: "hash07ae1"}]);
+    const [messages, setMessages, messagesRef] = useStateRef([]);
 
     const updateMessages = (data) => {
 
