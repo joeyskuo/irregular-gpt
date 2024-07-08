@@ -12,6 +12,6 @@
   background-color: #b7c5d3;
 }
 
-input:focus {
+textarea:focus {
   outline: none;
 }
