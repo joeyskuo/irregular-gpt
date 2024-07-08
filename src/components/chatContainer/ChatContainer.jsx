@@ -3,6 +3,7 @@ import { useStateRef } from "../../hooks/useStateRef";
 import './ChatContainer.scss';
 import MessageContainer from "./messageContainer/MessageContainer";
 import PromptInput from "./promptInput/PromptInput";
+import SplashContent from "./splashContent/SplashContent";
 import { MessageContext } from "../../models/messageContext/MessageContext";
 import { flushSync } from "react-dom";
 
@@ -71,6 +72,7 @@ const ChatContainer = (props) => {
 
     return (
         <div className="chat-container">
+            <SplashContent />
             <MessageContext.Provider value={{messages}}>
                 <MessageContainer />
             </MessageContext.Provider>
