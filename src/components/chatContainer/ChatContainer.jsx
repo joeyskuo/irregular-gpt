@@ -77,6 +77,7 @@ const ChatContainer = (props) => {
                 <MessageContainer />
             </MessageContext.Provider>
             <PromptInput />
+            <button className="test-button" onClick={() => sendMessage("Hello")}>Send Test Message</button>
         </div>
     )
 }
