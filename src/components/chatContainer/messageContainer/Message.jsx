@@ -7,7 +7,8 @@ const Message = (props) => {
     return (
         <div className={`message message--${props.message.role}`}>
             <span className='message-role-icon'>
-                <img src={testIcon} />
+                {props.message.role === 'user' && <img src='/src/assets/userIcon.png' />}
+                {props.message.role === 'assistant' && <img src='/src/assets/robotIcon.svg' />}
             </span>
             <span className='message-content'>
                 <div className='message-content-header'>{props.message.role}</div>
