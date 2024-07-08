@@ -10,6 +10,7 @@ import { flushSync } from "react-dom";
 const ChatContainer = (props) => {
 
     const [messages, setMessages, messagesRef] = useStateRef([]);
+    const [conversationStarted, setConversationStarted] = useState(false);
 
     const updateMessages = (data) => {
 
@@ -64,17 +65,18 @@ const ChatContainer = (props) => {
         const newMessageArr = [...messages];
         newMessageArr.push({role: "user", content: "Test Prompt Sent", messageId: "hash07ae1-2"});
         setMessages(newMessageArr);
-        // if(!sessionId)
-        // const sse2 = new EventSource("http://localhost:8080/stream");
+
+        if(!conversationStarted) setConversationStarted(true);
+
         const sessionId = getCookieValue("sessionId");
         fetch(`http://localhost:8080/${sessionId}/inference`);
     }
 
     return (
         <div className="chat-container">
-            <SplashContent />
+            {!conversationStarted && <SplashContent />}
             <MessageContext.Provider value={{messages}}>
-                <MessageContainer />
+                {conversationStarted && <MessageContainer />}
             </MessageContext.Provider>
             <PromptInput />
             <button className="test-button" onClick={() => sendMessage("Hello")}>Send Test Message</button>
