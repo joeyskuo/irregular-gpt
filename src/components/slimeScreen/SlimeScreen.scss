@@ -9,10 +9,21 @@
 
 }
 
-.slime-screen--heading {
+.slime-screen-heading {
     position: absolute;
     top: 20px;
     left: 40px;
 
-    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.2;
+    
+    &--title {
+        font-size: 20px;
+    }
+
+    &--version {
+        font-size: 15px;
+    }
 }
