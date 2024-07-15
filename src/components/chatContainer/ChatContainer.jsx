@@ -12,7 +12,7 @@ const ChatContainer = (props) => {
     const [messages, setMessages, messagesRef] = useStateRef([]);
     const [conversationStarted, setConversationStarted] = useState(false);
 
-    const updateMessages = (data) => {
+    const updateMessages = (data, messageId) => {
 
         const currentMessages = messagesRef.current;
         const currentMessagesLength = currentMessages.length;
@@ -27,7 +27,7 @@ const ChatContainer = (props) => {
             newMessages[newMessages.length-1] = updatedMessage;
 
         } else {
-            updatedMessage = {role: "assistant", content: "" + data, messageId: `hash000-${currentMessagesLength}`};
+            updatedMessage = {role: "assistant", content: "" + data, messageId: messageId};
             newMessages.push(updatedMessage);
         }
 
@@ -41,9 +41,10 @@ const ChatContainer = (props) => {
         sse.addEventListener("message", (messageObject) => {
 
             const data = messageObject.data;
+            const messageId = messageObject.lastEventId;
             const sanitizedData = data.replaceAll('\"', '');
 
-            updateMessages(sanitizedData)
+            updateMessages(sanitizedData, messageId)
         });
 
         return () => {
