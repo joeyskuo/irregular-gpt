@@ -63,7 +63,9 @@ const ChatContainer = (props) => {
 
     const sendMessage = () => {
         const newMessageArr = [...messages];
-        newMessageArr.push({role: "user", content: "Test Prompt Sent", messageId: "hash07ae1-2"});
+        const messageId = Date.now().toString(16);
+
+        newMessageArr.push({role: "user", content: "Test Prompt Sent", messageId: messageId});
         setMessages(newMessageArr);
 
         if(!conversationStarted) setConversationStarted(true);
