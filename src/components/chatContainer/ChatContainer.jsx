@@ -47,6 +47,11 @@ const ChatContainer = (props) => {
             updateMessages(sanitizedData, messageId)
         });
 
+        sse.addEventListener("error", (e) => {
+            console.log("An error occurred while attempting to connect.");
+            sse.close();
+        });
+
         return () => {
             console.log('eventSource closed!');
             sse.close();
