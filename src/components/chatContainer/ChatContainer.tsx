@@ -10,7 +10,7 @@ import { flushSync } from "react-dom";
 const ChatContainer = (props) => {
 
     const [messages, setMessages, messagesRef] = useStateRef([]);
-    const [conversationStarted, setConversationStarted] = useState(false);
+    const [conversationStarted, setConversationStarted] = useState<boolean>(false);
 
     const updateMessages = (data, messageId) => {
 
