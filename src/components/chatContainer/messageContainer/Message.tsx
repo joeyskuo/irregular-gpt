@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from "react";
-import testIcon from '../../../assets/icon.svg';
 import './Message.css';
 
 const Message = (props) => {
