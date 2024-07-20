@@ -4,7 +4,7 @@ import SlimeScreen from './components/slimeScreen/SlimeScreen';
 import './_reset.css';
 import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <SlimeScreen/>
   </React.StrictMode>,
