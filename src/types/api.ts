@@ -4,6 +4,6 @@ export type TMessage = {
     messageId: string
 }
 
-export type TMessageContext {
+export type TMessageContext = {
     messages: TMessage[]
 }
