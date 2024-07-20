@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import Message from "./Message";
 import { MessageContext } from "../../../models/messageContext/MessageContext";
 import './MessageContainer.scss';
