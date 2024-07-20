@@ -7,7 +7,7 @@ import SplashContent from "./splashContent/SplashContent";
 import { MessageContext } from "../../models/messageContext/MessageContext";
 import { flushSync } from "react-dom";
 
-const ChatContainer = (props) => {
+const ChatContainer = () => {
 
     const [messages, setMessages, messagesRef] = useStateRef([]);
     const [conversationStarted, setConversationStarted] = useState<boolean>(false);
