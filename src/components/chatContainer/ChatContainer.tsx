@@ -12,7 +12,7 @@ const ChatContainer = () => {
     const [messages, setMessages, messagesRef] = useStateRef([]);
     const [conversationStarted, setConversationStarted] = useState<boolean>(false);
 
-    const updateMessages = (data, messageId) => {
+    const updateMessages = (data : string, messageId : string) => {
 
         const currentMessages = messagesRef.current;
         const currentMessagesLength = currentMessages.length;
@@ -58,7 +58,7 @@ const ChatContainer = () => {
         }
     }, []);
 
-    function getCookieValue(name) 
+    function getCookieValue(name : string) 
     {
       const regex = new RegExp(`(^| )${name}=([^;]+)`)
       const match = document.cookie.match(regex)
@@ -67,7 +67,7 @@ const ChatContainer = () => {
       }
    }
 
-    const sendMessage = () => {
+    const sendMessage = (messageContent : string) => {
         const newMessageArr = [...messages];
         const messageId = Date.now().toString(16);
 
