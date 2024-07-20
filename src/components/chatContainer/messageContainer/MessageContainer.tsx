@@ -3,12 +3,11 @@ import Message from "./Message";
 import { MessageContext } from "../../../models/messageContext/MessageContext";
 import './MessageContainer.scss';
 
-const MessageContainer = (props) => {
+const MessageContainer = () => {
 
-    const {messages} = useContext(MessageContext);
+    const { messages } = useContext(MessageContext);
 
     useEffect(() => {
-        console.log(messages.at(-1));
     }, [messages]);
 
     return (
