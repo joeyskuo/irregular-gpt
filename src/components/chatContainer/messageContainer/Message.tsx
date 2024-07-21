@@ -1,5 +1,5 @@
 import { TMessage } from '../../../types/api';
-import './Message.css';
+import './Message.scss';
 
 type MessageProps = {
     message: TMessage
