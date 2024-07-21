@@ -4,12 +4,14 @@
     justify-content: center;
 
     width: 100%;
+    overflow: hidden;
 }
 
 .prompt-input {
     width: 100%;
     max-width: 800px;
-    height: 45px;
+    min-height: 45px;
+    max-height: 100%;
 
     padding: 10px 20px;
 
@@ -17,5 +19,26 @@
     border-radius: 15px;
 
     background-color: #dce2e7;
-}
 
+    resize: none;
+    overflow-y: scroll;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::-webkit-scrollbar {
+        background-color: transparent;
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #9fa4a8;
+        border-radius: 25px;
+    }
+
+    &::-webkit-scrollbar-button { 
+        background-color: transparent;
+        height: 15px;
+    }
+}
