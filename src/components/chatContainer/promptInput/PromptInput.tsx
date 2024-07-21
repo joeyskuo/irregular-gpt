@@ -6,7 +6,7 @@ const PromptInput = () => {
     return (
         <div className="prompt-input-wrapper">
             <div   className="prompt-input" 
-                        // placeholder="Reply to IrregularGPT.."
+                        placeholder="Reply to IrregularGPT.."
                         contentEditable
                         autoFocus/>
         </div>
