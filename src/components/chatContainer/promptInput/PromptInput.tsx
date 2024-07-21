@@ -5,7 +5,10 @@ const PromptInput = () => {
 
     return (
         <div className="prompt-input-wrapper">
-            <textarea className="prompt-input" placeholder="Reply to IrregularGPT.." autoFocus/>
+            <div   className="prompt-input" 
+                        // placeholder="Reply to IrregularGPT.."
+                        contentEditable
+                        autoFocus/>
         </div>
     )
 }
