@@ -71,13 +71,21 @@ const ChatContainer = () => {
         const newMessageArr = [...messages];
         const messageId = Date.now().toString(16);
 
-        newMessageArr.push({role: "user", content: "Test Prompt Sent", messageId: messageId});
+        const newMessage = {role: "user", content: "Respond with a random two-line sentence", messageId: messageId};
+        newMessageArr.push(newMessage);
         setMessages(newMessageArr);
 
         if(!conversationStarted) setConversationStarted(true);
 
         const sessionId = getCookieValue("sessionId");
-        fetch(`http://localhost:8080/${sessionId}/inference`);
+
+        fetch(`http://localhost:8080/${sessionId}/inference`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ content: newMessage.content }),
+        });
     }
 
     return (
