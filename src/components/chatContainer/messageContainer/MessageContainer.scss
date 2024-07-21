@@ -9,4 +9,12 @@
     height: 100%;
 
     padding: 25px;
+
+    overflow-y: scroll;
+
+    /* width */
+    &::-webkit-scrollbar {
+        display: none;
+        width: 5px;
+    }
 }
