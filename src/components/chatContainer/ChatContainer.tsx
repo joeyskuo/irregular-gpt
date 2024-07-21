@@ -71,7 +71,7 @@ const ChatContainer = () => {
         const newMessageArr = [...messages];
         const messageId = Date.now().toString(16);
 
-        const newMessage = {role: "user", content: "Respond with a random two-line sentence", messageId: messageId};
+        const newMessage = {role: "user", content: messageContent, messageId: messageId};
         newMessageArr.push(newMessage);
         setMessages(newMessageArr);
 
