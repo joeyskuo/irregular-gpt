@@ -94,8 +94,8 @@ const ChatContainer = () => {
             <MessageContext.Provider value={{messages}}>
                 {conversationStarted && <MessageContainer />}
             </MessageContext.Provider>
-            <PromptInput />
-            <button className="test-button" onClick={() => sendMessage("Hello")}>Send Test Message</button>
+            <PromptInput sendMessage={sendMessage}/>
+            {/* <button className="test-button" onClick={() => sendMessage("Hello")}>Send Test Message</button> */}
         </div>
     )
 }
