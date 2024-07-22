@@ -21,7 +21,7 @@ const PromptInput = ({sendMessage} : PromptInputProps) => {
     return (
         <div className="prompt-input-wrapper">
             <div   className="prompt-input" 
-                        placeholder="Reply to IrregularGPT.."
+                        data-placeholder="Reply to IrregularGPT.."
                         contentEditable
                         autoFocus
                         onKeyDown={handleKeyDown}

@@ -43,7 +43,7 @@
     }
 
     &:not(:focus)::before {
-        content: attr(placeholder);
+        content: attr(data-placeholder);
         color: #aaa;
     }
 }
