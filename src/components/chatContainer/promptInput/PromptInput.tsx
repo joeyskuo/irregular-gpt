@@ -6,13 +6,13 @@ type PromptInputProps = {
 
 const PromptInput = ({sendMessage} : PromptInputProps) => {
 
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (evt: React.KeyboardEvent<HTMLDivElement>) => {
 
-        if(e.key === 'Enter') {
+        if(evt.key === 'Enter') {
 
-            const inputElement = e.target;
+            const inputElement = evt.currentTarget;
             const prompt = inputElement.textContent;
-            sendMessage(prompt);
+            sendMessage(prompt || "");
             inputElement.innerHTML = '';
             inputElement.blur();
         }
