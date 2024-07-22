@@ -8,7 +8,7 @@ export const useStateRef = (initialValue) => {
   
     useEffect(() => {
       ref.current = value;
-      console.log("value has been saved as " + value);
+      // console.log("value has been saved as " + value);
     }, [value]);
   
     return [value, setValue, ref];
