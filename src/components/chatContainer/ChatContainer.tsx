@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from "react";
+import { useState, useEffect } from "react";
 import { useStateRef } from "../../hooks/useStateRef";
 import './ChatContainer.scss';
 import MessageContainer from "./messageContainer/MessageContainer";
@@ -15,7 +15,6 @@ const ChatContainer = () => {
     const updateMessages = (data : string, messageId : string) => {
 
         const currentMessages = messagesRef.current;
-        const currentMessagesLength = currentMessages.length;
 
         let latestMessage = currentMessages[currentMessages.length-1];
         let updatedMessage = {...latestMessage};
@@ -47,7 +46,7 @@ const ChatContainer = () => {
             updateMessages(sanitizedData, messageId)
         });
 
-        sse.addEventListener("error", (e) => {
+        sse.addEventListener("error", () => {
             console.log("An error occurred while attempting to connect.");
             sse.close();
         });
