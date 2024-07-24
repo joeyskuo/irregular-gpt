@@ -10,8 +10,8 @@ const Message = ({ message } : MessageProps) => {
     return (
         <div className={`message message--${message.role}`}>
             <span className='message-role-icon'>
-                {message.role === 'user' && <img src='/src/assets/userIcon.png' />}
-                {message.role === 'assistant' && <img src='/src/assets/robotIcon.svg' />}
+                {message.role === 'user' && <img src='/assets/userIcon.png' />}
+                {message.role === 'assistant' && <img src='/assets/robotIcon.svg' />}
             </span>
             <span className='message-content'>
                 <div className='message-content-header'>{message.role}</div>
