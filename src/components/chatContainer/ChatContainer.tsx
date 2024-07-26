@@ -31,13 +31,13 @@ const ChatContainer = () => {
         }
 
         flushSync(() => setMessages(newMessages));
-        scrollToLatestMessage();
     }
 
     const scrollToLatestMessage = () => {
 
         const messageContainer = document.querySelector('.message-container');
-        messageContainer.scrollTop = messageContainer.scrollHeight;
+
+        if(messageContainer) messageContainer.scrollTop = messageContainer.scrollHeight;
     }
 
     useEffect(() => {
@@ -63,6 +63,10 @@ const ChatContainer = () => {
             sse.close();
         }
     }, []);
+
+    useEffect(() => {
+        scrollToLatestMessage();
+    }, [messages]);
 
     function getCookieValue(name : string) 
     {
