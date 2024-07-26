@@ -31,6 +31,13 @@ const ChatContainer = () => {
         }
 
         flushSync(() => setMessages(newMessages));
+        scrollToLatestMessage();
+    }
+
+    const scrollToLatestMessage = () => {
+
+        const messageContainer = document.querySelector('.message-container');
+        messageContainer.scrollTop = messageContainer.scrollHeight;
     }
 
     useEffect(() => {
