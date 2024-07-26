@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useStateRef } from "../../hooks/useStateRef";
 import './ChatContainer.scss';
 import MessageContainer from "./messageContainer/MessageContainer";
@@ -11,6 +11,8 @@ const ChatContainer = () => {
 
     const [messages, setMessages, messagesRef] = useStateRef([]);
     const [conversationStarted, setConversationStarted] = useState<boolean>(false);
+
+    const messageContainerRef = useRef<HTMLDivElement | null>(null);
 
     const updateMessages = (data : string, messageId : string) => {
 
@@ -35,8 +37,7 @@ const ChatContainer = () => {
 
     const scrollToLatestMessage = () => {
 
-        const messageContainer = document.querySelector('.message-container');
-
+        const messageContainer = messageContainerRef.current;
         if(messageContainer) messageContainer.scrollTop = messageContainer.scrollHeight;
     }
 
@@ -102,7 +103,7 @@ const ChatContainer = () => {
         <div className="chat-container">
             {!conversationStarted && <SplashContent />}
             <MessageContext.Provider value={{messages}}>
-                {conversationStarted && <MessageContainer />}
+                {conversationStarted && <MessageContainer ref={messageContainerRef}/>}
             </MessageContext.Provider>
             <PromptInput sendMessage={sendMessage}/>
             {/* <button className="test-button" onClick={() => sendMessage("Hello")}>Send Test Message</button> */}
