@@ -9,12 +9,11 @@ const PromptInput = ({sendMessage} : PromptInputProps) => {
     const handleKeyDown = (evt: React.KeyboardEvent<HTMLDivElement>) => {
 
         if(evt.key === 'Enter') {
-
+            evt.preventDefault();
             const inputElement = evt.currentTarget;
             const prompt = inputElement.textContent;
             sendMessage(prompt || "");
             inputElement.innerHTML = '';
-            inputElement.blur();
         }
     }
 
