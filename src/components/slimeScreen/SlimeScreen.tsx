@@ -1,9 +1,16 @@
 import './SlimeScreen.scss';
 import ChatContainer from "../chatContainer/ChatContainer";
 
-const SlimeScreen = () => {
+type SlimeScreenProps = {
+    screenMode: string
+}
+
+const SlimeScreen = (props : SlimeScreenProps) => {
+
+    const { screenMode } = props;
+
     return (
-        <div className="slime-screen">
+        <div className={`slime-screen screen-mode--${screenMode}`}>
             <div className="slime-screen-heading">
                 <span className="slime-screen-heading--title">IrregularGPT</span>
                 <span className="slime-screen-heading--version">v0.2.0</span>

@@ -10,7 +10,7 @@ const TrueScreen = () => {
 
     return (
         <div className="true-screen">
-            <SlimeScreen />
+            <SlimeScreen screenMode={screenMode}/>
             {showInfo && <InfoScreen /> }
             <div className="slime-button-container">
                 <img className="slime-button slime-button--mobile" src='/assets/mobile.svg' onClick={() => setScreenMode("mobile")}/>
