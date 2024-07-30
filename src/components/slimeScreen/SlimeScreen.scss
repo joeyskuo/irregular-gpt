@@ -8,6 +8,16 @@
     align-items: center;
 
     transition: all 0.2s ease-out;
+
+    &.screen-mode--mobile {
+        width: 400px;
+        height: 800px;
+
+        border-color: grey;
+        border-style: solid;
+        border-width: 20px 10px 20px 10px;
+        border-radius: 25px;
+    }
 }
 
 .slime-screen-heading {
