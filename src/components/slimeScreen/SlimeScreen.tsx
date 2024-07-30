@@ -6,7 +6,7 @@ const SlimeScreen = () => {
         <div className="slime-screen">
             <div className="slime-screen-heading">
                 <span className="slime-screen-heading--title">IrregularGPT</span>
-                <span className="slime-screen-heading--version">v0.1.0</span>
+                <span className="slime-screen-heading--version">v0.2.0</span>
             </div>
             <ChatContainer />
         </div>
