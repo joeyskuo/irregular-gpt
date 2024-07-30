@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-export const useStateRef = (initialValue) => {
+export const useStateRef = (initialValue : any) => {
     
     const [value, setValue] = useState(initialValue);
   
