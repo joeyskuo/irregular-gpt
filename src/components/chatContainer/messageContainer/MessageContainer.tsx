@@ -3,7 +3,7 @@ import Message from "./Message";
 import { MessageContext } from "../../../models/messageContext/MessageContext";
 import './MessageContainer.scss';
 
-const MessageContainer = forwardRef<HTMLDivElement>((props, ref) => {
+const MessageContainer = forwardRef<HTMLDivElement>((_props, ref) => {
 
     const { messages } = useContext(MessageContext);
 
