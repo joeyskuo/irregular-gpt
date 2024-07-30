@@ -1,0 +1,15 @@
+.info-button {
+    height: 30px;
+    width: 30px;
+
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+
+    cursor: pointer;
+
+    path {
+        fill: aqua;
+        stroke: aqua;
+    }
+}
