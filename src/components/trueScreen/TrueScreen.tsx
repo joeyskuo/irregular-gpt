@@ -15,7 +15,7 @@ const TrueScreen = () => {
             <div className="slime-button-container">
                 <img className="slime-button slime-button--mobile" src='/assets/mobile.svg' onClick={() => setScreenMode("mobile")}/>
                 <img className="slime-button slime-button--tablet" src='/assets/tablet.svg' onClick={() => setScreenMode("tablet")}/>
-                <img className="slime-button slime-button--desktop" src='/assets/desktop.svg' onClick={() => setScreenMode("desktop")}/>
+                <img className="slime-button slime-button--desktop" src='/assets/desktop.svg' onClick={() => setScreenMode("default")}/>
             </div>
             <img className="info-button" src='/assets/info.svg' onClick={() => setShowInfo(!showInfo)}/>
         </div>
