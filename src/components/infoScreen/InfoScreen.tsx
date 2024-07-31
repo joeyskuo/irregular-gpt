@@ -1,8 +1,15 @@
 import './InfoScreen.scss';
 
-const InfoScreen = () => {
+type InfoScreenProps = {
+    hideInfo: React.MouseEventHandler<HTMLElement>
+}
+
+const InfoScreen = (props : InfoScreenProps) => {
+
+    const { hideInfo } = props;
+
     return (
-        <div className="info-screen">
+        <div className="info-screen" onClick={hideInfo}>
             <div className='info-nav'>
                 <div className="info-nav-topic">
                     <div className="info-nav-topic--title">Architecture</div>
