@@ -1,4 +1,4 @@
-const ComponentGraphContent = () => {
+const ComponentDiagramContent = () => {
 
     return (
         <div className="info-content--graph">
@@ -7,4 +7,4 @@ const ComponentGraphContent = () => {
     )
 };
 
-export default ComponentGraphContent;
+export default ComponentDiagramContent;

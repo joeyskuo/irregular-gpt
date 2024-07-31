@@ -1,10 +1,10 @@
 import { useState } from "react";
 import './InfoScreen.scss';
 import OverviewContent from "./overviewContent/OverviewContent";
-import ComponentGraphContent from "./componentGraphContent/ComponentGraphContent";
 import ServerSentEventContent from "./serverSentEventContent/ServerSentEventContent";
 import InferenceContent from "./inferenceContent/InferenceContent";
 import JobSchedulingContent from "./jobSchedulingContent/JobSchedulingContent";
+import ComponentDiagramContent from "./componentDiagramContent/ComponentDiagramContent";
 
 type InfoScreenProps = {
     hideInfo: React.MouseEventHandler<HTMLElement>
@@ -51,7 +51,7 @@ const InfoScreen = (props : InfoScreenProps) => {
             </div>
             <div className='info-box'>
                 {(topic === 'overview') && <OverviewContent />}
-                {(topic === 'component-graph') && <ComponentGraphContent/>}
+                {(topic === 'component-graph') && <ComponentDiagramContent/>}
                 {(topic === 'sse') && <ServerSentEventContent />}
                 {(topic === 'inference') && <InferenceContent />}
                 {(topic === 'job-scheduling') && <JobSchedulingContent />}
