@@ -32,7 +32,7 @@ const InfoScreen = (props : InfoScreenProps) => {
                         </a>
                     </div>
                     <div className="info-nav-item-container">
-                        <div className="info-nav-item" onClick={() => setTopic("component-graph")}>Component Graph</div>
+                        <div className="info-nav-item" onClick={() => setTopic("component-graph")}>Component Diagram</div>
                         <div className="info-nav-item" onClick={() => setTopic("sse")}>Server-Sent Events</div>
                     </div>
                 </div>
