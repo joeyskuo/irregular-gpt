@@ -1,3 +1,4 @@
+import { useState } from "react";
 import './InfoScreen.scss';
 
 type InfoScreenProps = {
@@ -6,6 +7,7 @@ type InfoScreenProps = {
 
 const InfoScreen = (props : InfoScreenProps) => {
 
+    const [topic, setTopic] = useState<string>("overview");
     const { hideInfo } = props;
 
     return (
