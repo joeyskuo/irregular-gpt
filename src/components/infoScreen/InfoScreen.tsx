@@ -16,7 +16,7 @@ const InfoScreen = (props : InfoScreenProps) => {
                 <div className="info-nav-topic">
                     <div className="info-nav-topic--title">Architecture</div>
                     <div className="info-nav-item-container">
-                        <div className="info-nav-item">Overview</div>
+                        <div className="info-nav-item" onClick={() => setTopic("overview")}>Overview</div>
                     </div>
                 </div>
                 <div className="info-nav-topic">
@@ -27,8 +27,8 @@ const InfoScreen = (props : InfoScreenProps) => {
                         </a>
                     </div>
                     <div className="info-nav-item-container">
-                        <div className="info-nav-item">Component Graph</div>
-                        <div className="info-nav-item">Server-Sent Events</div>
+                        <div className="info-nav-item" onClick={() => setTopic("component-graph")}>Component Graph</div>
+                        <div className="info-nav-item" onClick={() => setTopic("sse")}>Server-Sent Events</div>
                     </div>
                 </div>
                 <div className="info-nav-topic">
@@ -39,8 +39,8 @@ const InfoScreen = (props : InfoScreenProps) => {
                         </a>
                     </div>
                     <div className="info-nav-item-container">
-                        <div className="info-nav-item">Inference</div>
-                        <div className="info-nav-item">Job Scheduling</div>
+                        <div className="info-nav-item" onClick={() => setTopic("inference")}>Inference</div>
+                        <div className="info-nav-item" onClick={() => setTopic("job-scheduling")}>Job Scheduling</div>
                     </div>
                 </div>
             </div>
