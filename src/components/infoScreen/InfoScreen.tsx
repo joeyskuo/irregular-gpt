@@ -19,7 +19,7 @@ const InfoScreen = (props : InfoScreenProps) => {
         <div className="info-screen" onClick={hideInfo}>
             <div className='info-nav'>
                 <div className="info-nav-topic">
-                    <div className="info-nav-topic--title">Architecture</div>
+                    <div className="info-nav-topic--title">Infrastructure</div>
                     <div className="info-nav-item-container">
                         <div className="info-nav-item" onClick={() => setTopic("overview")}>Overview</div>
                     </div>
