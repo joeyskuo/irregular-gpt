@@ -4,7 +4,7 @@ const OverviewContent = () => {
 
     return (
         <div className="info-content--overview">
-            <h3>Diagram</h3>
+            <h3>Overview</h3>
             <img src="assets/overview.svg" />
             <p>The client-side code is hosted as a static website on a S3 bucket while the backend is deployed on an EC2 instance. The instance has Nginx, Fastify, and Redis running.</p>
             <p>The Fastify backend
