@@ -45,6 +45,11 @@
 }
 
 .info-nav-topic--title {
+
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
     font-size: larger;
     font-weight: 600;
 }
