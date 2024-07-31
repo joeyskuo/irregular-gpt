@@ -13,7 +13,7 @@ const SlimeScreen = (props : SlimeScreenProps) => {
         <div className={`slime-screen screen-mode--${screenMode}`}>
             <div className="slime-screen-heading">
                 <span className="slime-screen-heading--title">IrregularGPT</span>
-                <span className="slime-screen-heading--version">v0.2.0</span>
+                <span className="slime-screen-heading--version">v0.3.1</span>
             </div>
             <ChatContainer />
         </div>
