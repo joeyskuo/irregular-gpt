@@ -42,3 +42,31 @@
 
     border-radius: 10px;
 }
+
+.info-nav-topic--title {
+    font-size: larger;
+    font-weight: 600;
+}
+
+.info-nav-item-container {
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-nav-item {
+
+    height: 40px;
+    padding-left: 30px;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(70, 78, 82);
+    }
+}
