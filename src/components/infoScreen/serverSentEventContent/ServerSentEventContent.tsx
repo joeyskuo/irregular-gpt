@@ -1,3 +1,5 @@
+import './ServerSentEventContent.scss';
+
 const ServerSentEventContent = () => {
 
     return (
