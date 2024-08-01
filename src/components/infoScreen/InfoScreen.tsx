@@ -5,6 +5,7 @@ import ServerSentEventContent from "./serverSentEventContent/ServerSentEventCont
 import InferenceContent from "./inferenceContent/InferenceContent";
 import JobSchedulingContent from "./jobSchedulingContent/JobSchedulingContent";
 import ComponentDiagramContent from "./componentDiagramContent/ComponentDiagramContent";
+import SessionContent from "./sessionContent/SessionContent";
 
 type InfoScreenProps = {
     hideInfo: React.MouseEventHandler<HTMLElement>
@@ -56,6 +57,7 @@ const InfoScreen = (props : InfoScreenProps) => {
                 {(topic === 'sse') && <ServerSentEventContent />}
                 {(topic === 'inference') && <InferenceContent />}
                 {(topic === 'job-scheduling') && <JobSchedulingContent />}
+                {(topic === 'session') && <SessionContent />}
             </div>
         </div>
     )
