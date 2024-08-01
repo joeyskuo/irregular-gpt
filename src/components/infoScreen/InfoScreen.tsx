@@ -45,6 +45,7 @@ const InfoScreen = (props : InfoScreenProps) => {
                     </div>
                     <div className="info-nav-item-container">
                         <div className="info-nav-item" onClick={() => setTopic("inference")}>Inference</div>
+                        <div className="info-nav-item" onClick={() => setTopic("session")}>Sessions</div>
                         <div className="info-nav-item" onClick={() => setTopic("job-scheduling")}>Job Scheduling</div>
                     </div>
                 </div>
