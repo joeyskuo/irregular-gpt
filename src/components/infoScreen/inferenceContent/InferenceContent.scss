@@ -1,0 +1,21 @@
+.info-content--inference {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-content-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.info-content-rows {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+.info-content--redis {
+    align-self: center;
+}
