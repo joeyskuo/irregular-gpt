@@ -4,6 +4,7 @@ const ServerSentEventContent = () => {
 
     return (
         <div className="info-content--sse">
+            <h3>Server-Sent Events</h3>
             <p>When the application is first started, a new session is established with the Fastify backend. An event listener is then created for 'message' events from this session. Upon submitting a prompt for the Claude API, the response comes back in chunks through these message events. For each message-event, the event-handler would append to the current message (referencing the messageId) and invoke the setMessages hook.</p>
             <p>const [messages, setMessages] = useState( [] )</p>
             <div>
