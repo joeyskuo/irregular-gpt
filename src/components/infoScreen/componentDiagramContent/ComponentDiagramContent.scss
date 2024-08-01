@@ -1,9 +1,14 @@
 .info-content-diagram-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .info-content--diagram {
     max-height: 700px;
+}
+
+.info-content--title {
+    align-self: start;
 }
