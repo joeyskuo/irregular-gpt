@@ -13,7 +13,7 @@ const ServerSentEventContent = () => {
                     <li>React 18's batched updates would invoke the setMessages hook once instead of on each message-event</li>
                 </ul>
             </div>
-            <p>To resolve the out-of-sync messages state variable, the useRef hook was utilized so that latest value is accessed upon each message-event. Regarding the batched update issue, the current approach was to use flushSync which updates the DOM immediately for each message-event. The react.dev docs don't recommend the usage of flushSync as it can hurt performance, therefore an alternative will be needed.</p>
+            <p>Inside the event loop, the event handler functions used the value of the messages state variable at the time of their event trigger. To resolve this, the useRef hook was utilized so that latest value is accessed upon each message-event. Regarding the batched update issue, the current approach was to use flushSync which updates the DOM immediately for each message-event. The react.dev docs don't recommend the usage of flushSync as it can hurt performance, therefore an alternative will be needed.</p>
             <p>Minimizing the re-renders occurring for each message-event on a component-basis is ideal, and so instead of prop drilling, the React Context API was utilized to isolate the updates to the MessageContainer.</p>
             <p>The application can be much simpler without using server-sent events, with the inference API allowing for a full prompt-response per request, instead of streamed message chunks. The streaming implementation of the Claude API was chosen to tackle the technical challenges regarding its utilization.</p>
         </div>
