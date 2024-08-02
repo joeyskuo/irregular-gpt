@@ -18,10 +18,10 @@
     bottom: 20px;
 
     cursor: pointer;
+    fill: rgb(71, 71, 71);
 
-    path {
-        fill: aqua;
-        stroke: aqua;
+    &:hover {
+        opacity: .8;
     }
 }
 
@@ -40,4 +40,9 @@
     width: 30px;
 
     cursor: pointer;
+    fill: rgb(71, 71, 71);
+
+    &:hover {
+        opacity: .8;
+    }
 }
