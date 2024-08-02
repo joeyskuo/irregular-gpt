@@ -34,7 +34,7 @@ const TrueScreen = () => {
             <div className="slime-button-container">
                 <MobileIcon className="slime-button slime-button--mobile" onClick={() => setScreenMode("mobile")}/>
                 <TabletIcon className="slime-button slime-button--tablet" onClick={() => setScreenMode("tablet")}/>
-                <DesktopIcon className="slime-button slime-button--desktop" onClick={() => setScreenMode("desktop")}/>
+                <DesktopIcon className="slime-button slime-button--desktop" onClick={() => setScreenMode("default")}/>
             </div>
             <InfoIcon className="info-button" onClick={() => setShowInfo(!showInfo)}/>
         </div>
