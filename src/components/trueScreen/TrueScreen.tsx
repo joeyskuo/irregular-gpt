@@ -24,6 +24,10 @@ const TrueScreen = () => {
 
     return (
         <div className="true-screen">
+            <div className="true-screen-heading">
+                <span className="true-screen-heading--title">IrregularGPT</span>
+                <span className="true-screen-heading--version">v0.3.7</span>
+            </div>
             <SlimeScreen screenMode={screenMode}/>
             {showInfo && <InfoScreen hideInfo={hideInfo} /> }
             <div className="slime-button-container">
