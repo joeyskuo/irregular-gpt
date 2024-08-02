@@ -5,6 +5,7 @@ import './TrueScreen.scss';
 import MobileIcon from '../../../assets/mobile.svg?react';
 import TabletIcon from '../../../assets/tablet.svg?react';
 import DesktopIcon from '../../../assets/desktop.svg?react';
+import InfoIcon from '../../../assets/info.svg?react';
 
 const TrueScreen = () => {
 
@@ -35,7 +36,7 @@ const TrueScreen = () => {
                 <TabletIcon className="slime-button slime-button--tablet" onClick={() => setScreenMode("tablet")}/>
                 <DesktopIcon className="slime-button slime-button--desktop" onClick={() => setScreenMode("desktop")}/>
             </div>
-            <img className="info-button" src='/assets/info.svg' onClick={() => setShowInfo(!showInfo)}/>
+            <InfoIcon className="info-button" onClick={() => setShowInfo(!showInfo)}/>
         </div>
     )
 }
