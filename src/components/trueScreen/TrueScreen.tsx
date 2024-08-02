@@ -2,6 +2,9 @@ import { useState } from "react";
 import SlimeScreen from '../slimeScreen/SlimeScreen';
 import InfoScreen from "../infoScreen/InfoScreen";
 import './TrueScreen.scss';
+import MobileIcon from '../../../assets/mobile.svg?react';
+import TabletIcon from '../../../assets/tablet.svg?react';
+import DesktopIcon from '../../../assets/desktop.svg?react';
 
 const TrueScreen = () => {
 
@@ -24,9 +27,9 @@ const TrueScreen = () => {
             <SlimeScreen screenMode={screenMode}/>
             {showInfo && <InfoScreen hideInfo={hideInfo} /> }
             <div className="slime-button-container">
-                <img className="slime-button slime-button--mobile" src='/assets/mobile.svg' onClick={() => setScreenMode("mobile")}/>
-                <img className="slime-button slime-button--tablet" src='/assets/tablet.svg' onClick={() => setScreenMode("tablet")}/>
-                <img className="slime-button slime-button--desktop" src='/assets/desktop.svg' onClick={() => setScreenMode("default")}/>
+                <MobileIcon className="slime-button slime-button--mobile" onClick={() => setScreenMode("mobile")}/>
+                <TabletIcon className="slime-button slime-button--tablet" onClick={() => setScreenMode("tablet")}/>
+                <DesktopIcon className="slime-button slime-button--desktop" onClick={() => setScreenMode("desktop")}/>
             </div>
             <img className="info-button" src='/assets/info.svg' onClick={() => setShowInfo(!showInfo)}/>
         </div>
