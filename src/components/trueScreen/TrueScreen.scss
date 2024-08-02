@@ -23,6 +23,12 @@
     &:hover {
         opacity: .8;
     }
+
+    display: none;
+
+    @media (min-width: 1000px) {
+        display: flex;
+    }
 }
 
 .slime-button-container {
@@ -30,9 +36,14 @@
     right: 20px;
     bottom: 80px;
 
-    display: flex;
     flex-direction: column;
     gap: 20px;
+
+    display: none;
+
+    @media (min-width: 1000px) {
+        display: flex;
+    }
 }
 
 .slime-button {
